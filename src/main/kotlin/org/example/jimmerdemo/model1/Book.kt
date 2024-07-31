@@ -26,4 +26,12 @@ interface Book {
 
     @ManyToOne
     val store: BookStore?
+
+    @ManyToMany
+    @JoinTable(
+        name = "BOOK_AUTHOR_MAPPING",
+        joinColumnName = "BOOK_ID",
+        inverseJoinColumnName = "AUTHOR_id"
+    )
+    val authors: List<Author>
 }

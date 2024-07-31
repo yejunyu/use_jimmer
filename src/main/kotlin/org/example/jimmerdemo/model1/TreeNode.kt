@@ -17,4 +17,10 @@ interface TreeNode {
     val id: Long
 
     val name: String
+
+    @ManyToOne
+    val parent: TreeNode?
+
+    @OneToMany(mappedBy = "parent")
+    val childNodes: List<TreeNode>
 }

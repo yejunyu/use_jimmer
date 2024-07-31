@@ -26,4 +26,7 @@ interface Author {
      * 这里，Gender是一个枚举，，代码稍后给出
      */
     val gender: Gender
+
+    @ManyToMany(mappedBy = "authors")
+    val books: List<Book>
 }
