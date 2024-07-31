@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: jimmerDemo
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://117.72.37.213:3307/jimmer
+    username: root
+    password: hp51yYnbQqjBAWSj
+
+
+jimmer:
+  language: kotlin
+  show-sql: true
+  pretty-sql: true
+  database-validation-mode: WARNING
