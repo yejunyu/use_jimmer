@@ -3,9 +3,11 @@ spring:
     name: jimmerDemo
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://117.72.37.213:3307/jimmer
+    url: jdbc:mysql://117.72.37.213:3307/fldg
     username: root
     password: hp51yYnbQqjBAWSj
+    hikari:
+      catalog: fldg
 
 
 jimmer:
