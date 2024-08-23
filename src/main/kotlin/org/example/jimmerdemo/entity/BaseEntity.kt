@@ -1,24 +1,25 @@
-package org.example.jimmerdemo.model
+package com.thss.fswjj.entity
 
-import org.babyfish.jimmer.sql.Entity
 import org.babyfish.jimmer.sql.GeneratedValue
 import org.babyfish.jimmer.sql.GenerationType
 import org.babyfish.jimmer.sql.Id
+import org.babyfish.jimmer.sql.MappedSuperclass
+import java.time.LocalDateTime
 
 /**
  * @author yjy
  * @emial yyyejunyu@gmail.com
- * @date 2024/7/31
+ * @date 2024/8/19
  * @description
  **/
-@Entity
-interface PostImg {
+@MappedSuperclass
+interface BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long
 
-    val imgUrl: String
+    val createAt: LocalDateTime
 
-    val postId: Long
+    val updateAt: LocalDateTime
 }

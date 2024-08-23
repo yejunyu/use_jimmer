@@ -14,7 +14,7 @@ val jimmerVersion = "0.8.149"
 
 java {
     toolchain {
-        languageVersion = JavaLanguageVersion.of(17)
+        languageVersion = JavaLanguageVersion.of(21)
     }
 }
 
@@ -37,6 +37,7 @@ dependencies {
     // 用户编写的实体代码所需的依赖
     implementation("org.babyfish.jimmer:jimmer-core:${jimmerVersion}")
 
+//    implementation("com.baomidou:mybatis-plus-spring-boot3-starter:3.5.7")
     // 生成的代码所需的依赖，其他项目必然导入包含此依赖
     compileOnly("org.babyfish.jimmer:jimmer-sql:${jimmerVersion}")
 }
